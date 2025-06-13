@@ -11,26 +11,51 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
         header {
             background-color: #2c3e50;
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
         }
         .logo {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 10px;
+            font-weight: bold;
         }
         .slogan {
             font-style: italic;
             margin-bottom: 20px;
+            font-size: 1.2em;
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px 0;
+        }
+        .about {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .founders {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .founder {
+            text-align: center;
+            margin: 15px;
+            padding: 15px;
+            background: #eaeaea;
+            border-radius: 5px;
+            width: 40%;
+            min-width: 250px;
         }
         .platforms {
             display: flex;
@@ -61,6 +86,7 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 10px;
+            transition: background 0.3s;
         }
         .btn:hover {
             background: #2980b9;
@@ -72,6 +98,10 @@
             padding: 20px 0;
             margin-top: 30px;
         }
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -81,32 +111,53 @@
     </header>
 
     <div class="container">
-        <h2>Bienvenidos a nuestra comunidad</h2>
-        <p>Aquí encontrarás todos nuestros contenidos y medios de comunicación para estar conectado con nuestra misión de inclusión.</p>
+        <div class="about">
+            <h2>Nuestra Historia</h2>
+            <p>Somos una iniciativa creada por <span class="highlight">Eduardo Hernández Portilla</span> (de Puebla) y <span class="highlight">Emmanuel Piste Cruz</span> (de Yucatán), dos apasionados de los medios de comunicación con discapacidad visual.</p>
+            
+            <p>Nuestro sueño nació de la convicción de que la inclusión debe llegar a todos los rincones, y qué mejor manera que a través de los medios de comunicación. Así fundamos <span class="highlight">La Estrella FM</span>, nuestra estación de radio, y comenzamos a producir contenido accesible en diversas plataformas.</p>
+            
+            <div class="founders">
+                <div class="founder">
+                    <h3>Eduardo Hernández Portilla</h3>
+                    <p>Puebla</p>
+                </div>
+                <div class="founder">
+                    <h3>Emmanuel Piste Cruz</h3>
+                    <p>Yucatán</p>
+                </div>
+            </div>
+            
+            <p>Creemos firmemente que la discapacidad visual no es un límite, sino una oportunidad para crear contenidos innovadores y verdaderamente inclusivos. Nuestro objetivo es romper barreras y demostrar que con pasión y dedicación, todo es posible.</p>
+        </div>
+
+        <h2>Nuestras Plataformas</h2>
+        <p>Conéctate con nosotros a través de nuestros diferentes medios:</p>
 
         <div class="platforms">
             <div class="platform">
                 <h3>La Estrella FM</h3>
-                <p>Nuestra estación de radio</p>
-                <a href="https://tuestacionderadio.com" class="btn" id="radioBtn">Escuchar ahora</a>
+                <p>Nuestra estación de radio donde compartimos música, noticias y contenido inclusivo</p>
+                <a href="https://elmundodelosciegos.github.io/laestrella-fm/" class="btn" id="radioBtn">Sintonizar ahora</a>
             </div>
 
             <div class="platform">
                 <h3>Podcast en Spotify</h3>
-                <p>Nuestros programas en formato podcast</p>
-                <a href="https://open.spotify.com/tupodcast" class="btn">Escuchar en Spotify</a>
+                <p>Escucha nuestros programas en formato podcast cuando quieras</p>
+                <a href="https://open.spotify.com/episode/2aTR3FXPBWccECikHYe6EW?si=jLsR6SFWShWQn0hJJ1qS5w" class="btn">Escuchar en Spotify</a>
             </div>
 
             <div class="platform">
                 <h3>Canal de YouTube</h3>
-                <p>Contenido audiovisual accesible</p>
-                <a href="https://youtube.com/tucanal" class="btn">Visitar canal</a>
+                <p>Contenido audiovisual diseñado para ser accesible</p>
+                <a href="https://youtube.com/@elmundodelossiegos?si=JA2uBNPSXCoTgphX" class="btn">Visitar canal</a>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2023 El Mundo de los Ciegos. Todos los derechos reservados.</p>
+        <p>&copy; 2025 El Mundo de los Ciegos. Todos los derechos reservados.</p>
+        <p>Llevando inclusión a cada rincón</p>
     </footer>
 
     <script>
