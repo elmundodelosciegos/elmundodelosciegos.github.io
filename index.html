@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mundo de los Ciegos - Llevando inclusión a cada rincón</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .slogan {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .platforms {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .platform {
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            width: 25%;
+            min-width: 200px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .platform img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">El Mundo de los Ciegos</div>
+        <div class="slogan">Llevando inclusión a cada rincón</div>
+    </header>
+
+    <div class="container">
+        <h2>Bienvenidos a nuestra comunidad</h2>
+        <p>Aquí encontrarás todos nuestros contenidos y medios de comunicación para estar conectado con nuestra misión de inclusión.</p>
+
+        <div class="platforms">
+            <div class="platform">
+                <h3>La Estrella FM</h3>
+                <p>Nuestra estación de radio</p>
+                <a href="https://tuestacionderadio.com" class="btn" id="radioBtn">Escuchar ahora</a>
+            </div>
+
+            <div class="platform">
+                <h3>Podcast en Spotify</h3>
+                <p>Nuestros programas en formato podcast</p>
+                <a href="https://open.spotify.com/tupodcast" class="btn">Escuchar en Spotify</a>
+            </div>
+
+            <div class="platform">
+                <h3>Canal de YouTube</h3>
+                <p>Contenido audiovisual accesible</p>
+                <a href="https://youtube.com/tucanal" class="btn">Visitar canal</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 El Mundo de los Ciegos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Manejo del botón de radio para que al volver regrese a la página principal
+        document.getElementById('radioBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Guarda la página actual antes de redirigir
+            sessionStorage.setItem('prevPage', window.location.href);
+            window.location.href = this.href;
+        });
+
+        // Al cargar la página, verifica si viene de una redirección
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('prevPage')) {
+                sessionStorage.removeItem('prevPage');
+                // Aquí podrías agregar lógica adicional si lo necesitas
+            }
+        });
+
+        // Esto es para manejar el botón "Atrás" del navegador
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                // La página se cargó desde el cache (como al presionar Atrás)
+                // Puedes agregar lógica aquí si es necesario
+            }
+        });
+    </script>
+</body>
+</html>
